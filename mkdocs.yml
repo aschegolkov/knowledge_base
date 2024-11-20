@@ -44,18 +44,35 @@ markdown_extensions:
 
 # MKDocs theme params
 theme:
-    name: material
-    language: ru
-    palette:
-        primary: black
-        accent: amber
-    font:
-      text: "Roboto"
-      code: "Roboto Mono"
-    features:
-      - tabs
-      - instant
-      - navigation.expand
+  name: material
+  language: ru
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: yellow
+      toggle:
+        icon: material/lightbulb
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: black
+      accent: yellow
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to dark mode
+  features:
+    - navigation.tabs
+    - navigation.instant
+    - navigation.tracking
+    - navigation.top
+    - toc.integrate
+  font:
+    text: "Roboto"
+    code: "Roboto Mono"
+  logo: img/icon.png
+  favicon: img/icon.png
+
 #extra_css:
 #  - stylesheets/extra.css
 
