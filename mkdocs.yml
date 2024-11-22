@@ -76,9 +76,6 @@ theme:
 #extra_css:
 #  - stylesheets/extra.css
 
-nav:
-  - networks:
-
 # Used plugins
 plugins:
   - search
