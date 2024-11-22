@@ -1,4 +1,3 @@
-title: NE8000 VRP
 
 # Huawei NetEngine 8000 VRP
 
