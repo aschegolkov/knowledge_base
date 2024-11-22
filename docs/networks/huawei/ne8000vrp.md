@@ -1,3 +1,4 @@
+title: NE8000 VRP
 
 # Huawei NetEngine 8000 VRP
 
@@ -21,7 +22,7 @@
 # Таймзона, add - "+", minus - "-"
 clock timezone KRAT add 07:00:00
 # Имя устройства
-sysname BLA-BLA
+sysname LAB
 # Сохранять current-config раз в 30 минут
 set save-configuration interval 30
 
@@ -51,7 +52,7 @@ dns server 80.65.16.1
 dns server 80.65.20.1
 dns domain orionnet.ru
 
-# Отключение plug-and-play 
+# Отключение plug-and-play фич
 undo dcn
 undo pnp enable
 undo pnp default route
@@ -64,6 +65,7 @@ interface ether0/0/0
 
 #### Port-Group
 
+!!! note "Использовать крайне неудобно"
 
 Аналог interface range, можно только `shutdown`/`undo shutdown`
 
@@ -127,7 +129,7 @@ bgp $ASN
   peer $IPADDR reflect-client # настройка peer'а как RR-client
   peer $IPADDR next-hop-local # смена IP next-hop в маршруте на собственный адрес устройства
   peer $IPADDR advertise-community
-  peer $IPADDR route-filter $XPL-RF {export|import} # Extended routing-policy language (XPL) route-filter на peer'а
+  peer $IPADDR route-filter $XPL-RF {export|import} # Extended routing-policy language (XPL) XPL route-filter на peer'а
   
 ```
 
@@ -155,7 +157,7 @@ isis $NUM
  bfd all-interfaces min-tx-interval 50 min-rx-interval 50
  circuit-cost 100000 level-2
  network-entity 49.0001.1092.2625.5214.00
- is-name BLA-BLA
+ is-name LAB-DS-NE8000
  timer spf 5 1 50
  frr
   loop-free-alternate level-2
@@ -167,8 +169,8 @@ isis $NUM
 ```bash
 interface 25GE0/1/47.1105
  mtu 9198
- description <<  >>
- ip address 1.1.1.1 255.255.255.252
+ description << LAB-C4900M >>
+ ip address 94.73.254.42 255.255.255.254
  statistic enable
  pim sm         
  isis enable 1
@@ -308,5 +310,6 @@ ntp-service server source-interface all disable
 ntp-service ipv6 server source-interface all disable
 ntp-service unicast-server 109.226.249.72 source-interface LoopBack0 preference
 ```
+
 
 
