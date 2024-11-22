@@ -6,7 +6,7 @@ title: NE8000 VRP
 
 ### Управление конфигурацией
 
-В Huawei VRP на NE8000 присутствует система candidate конфигураций...
+В Huawei VRP на NE8000 присутствует система candidate конфигураций
 
 * `display configuration candidate changes` (`di co ca ch`) - показать различия между текущей и candidate(незакоммиченной) конфигурацией
 
@@ -16,7 +16,7 @@ title: NE8000 VRP
 
 ### Базовая
 
-Типовая конфигурация, не является идеальной:
+Примеры конфигураций:
 
 ```bash
 # Таймзона, add - "+", minus - "-"
@@ -64,8 +64,6 @@ interface ether0/0/0
 ### Интерфейсы
 
 #### Port-Group
-
-!!! note "Использовать крайне неудобно"
 
 Аналог interface range, можно только `shutdown`/`undo shutdown`
 
