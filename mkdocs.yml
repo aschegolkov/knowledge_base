@@ -54,9 +54,12 @@ theme:
       text: "Roboto"
       code: "Roboto Mono"
     features:
-      - tabs
-      - instant
-      - navigation.expand
+      - navigation.tabs
+      - navigation.instant
+      - navigation.tracking
+      - navigation.indexes
+      - navigation.top
+
 #extra_css:
 #  - stylesheets/extra.css
 
@@ -65,11 +68,8 @@ plugins:
   - search
   - minify:
       minify_html: true
-  - git-revision-date-localized:
-      type: timeago
-  - awesome-pages:
-      collapse_single_pages: true
-      strict: false
+  - git-revision-date-localized
+  - awesome-pages
 
 
 # Copyright
