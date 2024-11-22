@@ -5,7 +5,7 @@
 
  Пример LDP LSP: 
 
- ```bash
+```bash
                  LSP Information: LDP LSP
 ----------------------------------------------
 FEC                In/Out Label    In/Out IF  
