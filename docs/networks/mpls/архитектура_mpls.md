@@ -6,7 +6,7 @@
 
 Cтек меток размещается между заголовками сетевого и канального уровней (L2 и L3)
 
-![mpls label](./docs/img/mpls_label.jpg)
+![mpls label](mpls_label.jpg)
 
 **Label** — собственно сама метка. Длина — 20 бит.
 **TC (**CoS**)**  — Traffic Class. Несёт в себе приоритет пакета, как поле DSCP в IP.
