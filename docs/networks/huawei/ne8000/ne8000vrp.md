@@ -45,6 +45,28 @@ command alias
  alias shipcef command "display fib slot 1"
  alias show command display
  alias shpfx command "dis c c xpl-pfx"
+ alias brp command "display bgp routing-table peer"
+ alias bv command "display bgp vpnv4 vpn-instance"
+ alias cca command "display configuration commit changes at"
+ alias ccl command "display configuration commit changes last 1"
+ alias ccs command "display configuration commit changes since"
+ alias cl command "display configuration commit list"
+ alias cmp command "display configuration candidate changes"
+ alias exit command "quit"
+ alias lld command "display lldp neighbor brief"
+ alias rt command "display ip routing-table"
+ alias rtv command "display ip routing-table vpn-instance"
+ alias sfp command "display elabel optical-module brief"
+ alias show command "display"
+ alias sid command "display interface description"
+ alias sii command "display ip interface brief"
+ alias sr command "display current-configuration"
+ alias sri command "display current-configuration interface"
+ alias srig command "display current-configuration interface GigabitEthernet"
+ alias srp command "display current-configuration configuration"
+ alias srpa command "display current-configuration configuration command-alias"
+ alias srpb command "display current-configuration configuration bgp"
+ alias srps command "display current-configuration configuration route-static"
 
 # DNS-клиент
 dns resolve
@@ -310,4 +332,30 @@ ntp-service unicast-server 109.226.249.72 source-interface LoopBack0 preference
 ```
 
 
+### NQA тесты 
 
+``` bash
+nqa test-instance PE1  PE2
+ test-type icmpjitter
+ destination-address ipv4 1.1.1.1
+ source-address ipv4 2.2.2.1
+ send-trap testfailure
+ interval milliseconds 100
+ probe-count 1
+ jitter-packetnum 3000
+ icmp-jitter-mode icmp-echo
+ frequency 3600
+ start now
+#
+nqa test-instance PE1 PE3
+ test-type icmpjitter
+ destination-address ipv4 1.1.1.11
+ source-address ipv4 2.2.2.2
+ send-trap testfailure
+ interval milliseconds 100
+ probe-count 1
+ jitter-packetnum 3000
+ icmp-jitter-mode icmp-echo
+ frequency 3600
+ start now
+ ```
