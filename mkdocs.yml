@@ -62,12 +62,12 @@ theme:
       toggle:
         icon: material/lightbulb-outline
         name: Switch to dark mode
-    font:
-      text: "Roboto"
-      code: "Roboto Mono"
-    logo: img/icon.png
-    favicon: img/icon.png
-    features:
+  font:
+    text: "Roboto"
+    code: "Roboto Mono"
+  logo: img/icon.png
+  favicon: img/icon.png
+  features:
       - navigation.tabs
       - navigation.instant
       - navigation.tracking
