@@ -83,9 +83,7 @@ plugins:
   - minify:
       minify_html: true
   - git-revision-date-localized
-  - awesome-pages:
-      collapse_single_pages: true
-      strict: false
+  - awesome-pages
 
 
 # Copyright
