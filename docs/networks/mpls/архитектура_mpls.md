@@ -6,7 +6,7 @@
 
 Cтек меток размещается между заголовками сетевого и канального уровней (L2 и L3)
 
-![mpls label](/img/mpls_label.jpg)
+![mpls label](http://book.itep.ru/4/4/mpls/label.jpg)
 
 
  Пример LDP LSP: 
