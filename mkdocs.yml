@@ -82,7 +82,7 @@ theme:
 # Used plugins
 plugins:
   - search
-  - mkdocs-autorefs
+  - autorefs
   - minify:
       minify_html: true
   - git-revision-date-localized:
