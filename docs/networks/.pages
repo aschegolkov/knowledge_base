@@ -1,13 +1,6 @@
 title: Networks
 arrange:
-    - index.md 
-    - cli_crossfit.md
-    - protocols-tech
-    - arista
-    - cisco
+    - index.md
     - juniper
     - huawei
-    - dlink
-    - mikrotik
-    - design
 
