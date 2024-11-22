@@ -10,6 +10,14 @@ repo_url: https://github.com/aschegolkov/knowledge_base
 # Параметры для документов
 docs_dir: docs
 
+# Навигация
+nav:
+  - Home: index.md
+  - Networks:
+      - huawei:
+          - ne8000:
+              - NE8000 VRP: networks/huawei/ne8000/ne8000vrp.md
+
 # Extensions to MD
 markdown_extensions:
   - markdown.extensions.admonition
@@ -82,7 +90,6 @@ theme:
 # Used plugins
 plugins:
   - search
-  - autorefs
   - minify:
       minify_html: true
   - git-revision-date-localized:
