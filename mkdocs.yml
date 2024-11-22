@@ -77,7 +77,6 @@ theme:
 #  - stylesheets/extra.css
 
 nav:
-  - Home: index.md
   - networks:
 
 # Used plugins
