@@ -82,6 +82,7 @@ theme:
 # Used plugins
 plugins:
   - search
+  - mkdocs-autorefs
   - minify:
       minify_html: true
   - git-revision-date-localized:
@@ -89,7 +90,7 @@ plugins:
   - awesome-pages:
       collapse_single_pages: true
       strict: false
-  - mkdocs-autorefs
+
 
 # Copyright
 copyright: "aschegolkov 2024"
