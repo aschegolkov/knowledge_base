@@ -4,7 +4,7 @@
 site_name: aschegolkov
 site_description: selfdocs
 site_author: aschegolkov
-repo_name: aschegolkov/knowledge_base.git
+repo_name: aschegolkov/knowledge_base
 repo_url: https://github.com/aschegolkov/knowledge_base
 
 # Extensions to MD
