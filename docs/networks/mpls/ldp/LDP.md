@@ -16,7 +16,7 @@ FEC                In/Out Label    In/Out IF
 К примеру, для дефолт маршрута
 
 ```bash
-<SPBR-GPE3>display ip routing-table 0.0.0.0 verbose 
+PE3>display ip routing-table 0.0.0.0 verbose 
 Route Flags: R - relay, D - download to fib, T - to vpn-instance, B - black hole route
 ------------------------------------------------------------------------------
 Routing Table : _public_
