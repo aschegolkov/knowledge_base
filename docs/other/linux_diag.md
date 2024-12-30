@@ -1,2 +1,2 @@
-![alt text](linuxd.png)
+![alt text](linuxdiag.png)
 
