@@ -74,3 +74,65 @@ VPLS (с split horizon):
 
 
 ![alt text](vpls-broadcast.png)
+
+
+
+1. Что такое инкапсуляция в VPLS?
+Это способ упаковки Ethernet-пакетов для передачи через MPLS-сеть. В VPLS используются два MPLS-тега:
+
+Внешний тег (Tunnel Label): Для передачи через MPLS-сеть.
+
+Внутренний тег (VC Label): Для идентификации VPLS-соединения.
+
+2. Типы инкапсуляции:
+a. Стандартная инкапсуляция (RFC 4761):
+Тип 19: Используется по умолчанию в Huawei VRPv8.
+
+Поддерживается большинством вендоров (Cisco, Juniper и др.).
+
+b. Проприетарная инкапсуляция Huawei (VRPv5):
+Тип 4: Для VLAN-режима.
+
+Тип 5: Для Ethernet-режима.
+
+Используется в старых версиях Huawei (VRPv5).
+
+3. Когда что использовать?
+Стандартная инкапсуляция (RFC 4761):
+
+Если нужно работать с оборудованием других вендоров.
+
+Если обновляешься с VRPv5 на VRPv8.
+
+Проприетарная инкапсуляция (тип 4/5):
+
+Если все устройства в сети — Huawei VRPv5.
+
+4. Как настроить стандартную инкапсуляцию?
+bash
+Copy
+vsi VSI_NAME auto  
+  pwsignal bgp  
+    encapsulation rfc4761-compatible  
+5. Пример:
+Стандартная инкапсуляция:
+
+bash
+Copy
+vsi VPLS_CUSTOMER auto  
+  pwsignal bgp  
+    encapsulation rfc4761-compatible  
+Проприетарная инкапсуляция (VRPv5):
+
+bash
+Copy
+vsi VPLS_CUSTOMER auto  
+  pwsignal bgp  
+    encapsulation vpls-family-compatible  
+Итог:
+Стандартная инкапсуляция (RFC 4761) — для совместимости с другими вендорами.
+
+Проприетарная инкапсуляция (тип 4/5) — для старых Huawei VRPv5.
+
+
+
