@@ -12,3 +12,11 @@ traffic specification on the interface.
 GTS — это расширение возможностей traffic shaping, позволяющее работать с более сложными и нерегулярными потоками трафика, улучшая управление ресурсами и предотвращая перегрузки в сети.
 
  GTS can shape a specified packet flow or all packets on the interface. 
+
+
+
+![alt text](congestionmanagement.png)
+
+
+
+![alt text](portque.png)
